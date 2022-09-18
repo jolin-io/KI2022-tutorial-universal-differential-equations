@@ -3,7 +3,7 @@
 |          |                                    |
 | -------- | ---------------------------------- |
 | Speaker  | Stephan Sahm stephan.sahm@jolin.io |
-| Company  | Jolin.io                           |
+| Company  | [Jolin.io](https://www.jolin.io)   |
 | Short    | UDE                                |
 | Day      | Monday 10th September              |
 | Time     | 09:00 - 12:00 CEST                 |
