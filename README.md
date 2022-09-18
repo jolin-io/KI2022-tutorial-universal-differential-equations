@@ -32,6 +32,30 @@ The tutorial consists of a collection of jupyter notebooks. You can run them and
 3. [deep dive into universal differential equations](https://mybinder.org/v2/gh/jolin-io/KI2022-tutorial-universal-differential-equations/main?filepath=03%20deep%20dive%20into%20universal%20differential%20equations.ipynb)
 4. [introduction to bayesian differential equations](https://mybinder.org/v2/gh/jolin-io/KI2022-tutorial-universal-differential-equations/main?filepath=04%20introduction%20to%20bayesian%20differential%20equations.ipynb)
 
+## Local installation (usually not needed)
+
+If the links above don't work for you, you can run the tutorial locally instead of relying on mybinder.org.
+
+This process is identical to how mybinder.org is actually doing it. Hence you will get the very same environment.
+
+1. Install [docker](https://docs.docker.com/get-docker/)
+
+2. Install [repo2docker](https://repo2docker.readthedocs.io/en/latest/install.html) by running
+
+    ```bash
+    python3 -m pip install --user jupyter-repo2docker
+    ```
+
+    If you do not have python, consider installing it via [Anaconda](https://www.anaconda.com/products/individual).
+
+3. Execute repo2docker on this repository. It will take several 10 minutes to build everything.
+
+    ```bash
+    jupyter-repo2docker https://github.com/jolin-io/KI2022-tutorial-universal-differential-equations
+    ```
+
+    Usually, a browser is opened automatically for you, but if not, an url is also printed at the very end of the command output. Copy that one to your browser and you are ready to go.
+
 <br>
 
 ## Supported by [Jolin.io](https://www.jolin.io)
