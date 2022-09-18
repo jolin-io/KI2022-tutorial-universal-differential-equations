@@ -2,7 +2,32 @@
 
 # 1. introduction to julia
 
-TODO
+```julia
+function fibonacci(n)
+    n in (0, 1) && return n
+    return fibonacci(n-1) + fibonacci(n-2)
+end
+fibonacci(40)
+```
+
+
+
+```julia
+function fibonacci_improved(n)
+    array = fill(-1, n+1)
+    array[0+1] = 0
+    array[1+1] = 1
+    return fibonacci_improved(n, array)
+end
+function fibonacci_improved(n, array)
+    if array[n+1] == -1
+        array[n+1] = fibonacci_improved(n-1, array) + fibonacci_improved(n-2, array)
+    end
+    return array[n+1]
+end
+```
+
+
 
 # 2. introduction to deep learning
 
