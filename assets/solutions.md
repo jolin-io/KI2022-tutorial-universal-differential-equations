@@ -10,8 +10,6 @@ end
 fibonacci(40)
 ```
 
-
-
 ```julia
 function fibonacci_improved(n)
     array = fill(-1, n+1)
@@ -26,8 +24,6 @@ function fibonacci_improved(n, array)
     return array[n+1]
 end
 ```
-
-
 
 # 2. introduction to deep learning
 
@@ -44,8 +40,6 @@ Plots.plot(x -> evalpoly(x, (0, -2, 1)), x[1, :]; label=false)
 Plots.scatter!(x[1, :], y[1, :]; label=false, markersize=3)
 ```
 
-
-
 ```julia
 function loss_function(x, y, ps, st)
     y_pred, st = Lux.apply(model, x, ps, st)
@@ -61,11 +55,8 @@ p2 = Plots.plot(predict(ps_trained), ylim = (0,6))
 Plots.plot(p1, p2, layout=(3,1))
 ```
 
-
-
 ```julia
 Plots.plot(predict(p_initial))
-
 ```
 
 ```julia
@@ -75,8 +66,6 @@ loss(p_initial)
 ```julia
 shooting_loss(p_initial)
 ```
-
-
 
 ```julia
 minimizer = p_initial
@@ -94,16 +83,12 @@ end
 p_trained = minimizer
 ```
 
-
-
 ```julia
 # Look at long term prediction
 t_long = (0.0f0, 50.0f0)
 estimate_long = solve(ode_prob_nn, saveat = 0.25f0, tspan = t_long, p = p_trained)
 Plots.plot(estimate_long.t, transpose(xscale .* Array(estimate_long)), xlabel = "t", ylabel = "x(t),y(t)")
 ```
-
-
 
 ```julia
 ideal_problem = DataDrivenDiffEq.DataDrivenProblem(X_pred, Y=Y_ideal)
